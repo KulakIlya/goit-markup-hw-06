@@ -13,10 +13,37 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0;
   color: #2e2f42;
 }
 
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1158px;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 120px 0;
+}
+
 .section-title {
+  margin-bottom: 72px;
+
   font-size: 36px;
   font-weight: 700;
   text-transform: capitalize;
@@ -24,6 +51,18 @@ h6 {
   letter-spacing: 0.72px;
 
   text-align: center;
+}
+
+.section-list {
+  gap: 24px;
+}
+
+.section-list .card-text {
+  padding: 32px 0;
+}
+
+.section-list .text {
+  margin-top: 8px;
 }
 
 .title {
@@ -64,13 +103,30 @@ ul {
 }
 
 .btn {
+  border: 0;
   cursor: pointer;
 }
 
 /* Header */
 
 .main-header {
+  padding: 24px 0;
   color: #2e2f42;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.nav-list,
+.contact-list {
+  display: flex;
+  gap: 40px;
 }
 
 .nav-list .link,
@@ -117,6 +173,11 @@ ul {
 }
 
 .hero-btn {
+  margin-top: 48px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  min-width: 169px;
+
   color: currentColor;
   background-color: #4d5ae5;
 
@@ -131,10 +192,29 @@ ul {
   background-color: #404bbf;
 }
 
+/* Features */
+
+.features-list {
+  display: flex;
+}
+
+.features-list .item {
+  flex-basis: 264px;
+  flex-shrink: 0;
+}
+
+.features-list .text {
+  margin-top: 8px;
+}
+
 /* Team section */
 
 .team {
   background-color: #f4f4fd;
+}
+
+.team-list {
+  display: flex;
 }
 
 .team-list .item {
@@ -143,13 +223,39 @@ ul {
   background-color: #ffffff;
 }
 
+.team-list .card-text {
+  border-radius: 0px 0px 4px 4px;
+  background: var(--WHITE, #fff);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+/* Portfolio section */
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-list .item {
+  flex-basis: calc(100% - 48px) / 3;
+  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+}
+
 /* Main footer */
 
 .main-footer {
+  padding: 100px 0;
+
   background-color: #2e2f42;
   color: #f4f4fd;
 }
 
 .main-footer .accent {
   color: #f4f4fd;
+}
+
+.main-footer .text {
+  margin-top: 16px;
 }
