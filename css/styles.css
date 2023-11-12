@@ -7,6 +7,20 @@ body {
   line-height: 1.5;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -61,8 +75,8 @@ img {
   padding: 32px 0;
 }
 
-.section-list .text {
-  margin-top: 8px;
+.section-list .title {
+  margin-bottom: 8px;
 }
 
 .title {
@@ -110,8 +124,9 @@ ul {
 /* Header */
 
 .main-header {
-  padding: 24px 0;
   color: #2e2f42;
+
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .main-header .container {
@@ -121,6 +136,11 @@ ul {
 
 .main-nav {
   display: flex;
+  align-items: center;
+}
+
+.main-nav .logo {
+  margin-right: 76px;
 }
 
 .nav-list,
@@ -131,6 +151,8 @@ ul {
 
 .nav-list .link,
 .contact-list .link {
+  display: inline-block;
+  padding: 24px 0;
   color: currentColor;
 
   font-size: inherit;
@@ -159,12 +181,17 @@ ul {
 /* Hero section */
 
 .hero {
+  padding: 188px 0;
+
   background-color: #2e2f42;
   color: #ffffff;
   text-align: center;
 }
 
 .main-title {
+  margin: 0 auto;
+  max-width: 496px;
+
   color: currentColor;
   font-size: 56px;
   font-weight: 700;
@@ -173,6 +200,9 @@ ul {
 }
 
 .hero-btn {
+  display: block;
+
+  margin: 0 auto;
   margin-top: 48px;
   padding: 16px 32px;
   border-radius: 4px;
@@ -199,12 +229,10 @@ ul {
 }
 
 .features-list .item {
+  margin-bottom: 8px;
+
   flex-basis: 264px;
   flex-shrink: 0;
-}
-
-.features-list .text {
-  margin-top: 8px;
 }
 
 /* Team section */
@@ -221,9 +249,7 @@ ul {
   text-align: center;
 
   background-color: #ffffff;
-}
 
-.team-list .card-text {
   border-radius: 0px 0px 4px 4px;
   background: var(--WHITE, #fff);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -236,11 +262,17 @@ ul {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 48px;
 }
 
 .portfolio-list .item {
   flex-basis: calc(100% - 48px) / 3;
-  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+}
+
+.portfolio-list .card-text {
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid #e7e9fc;
 }
 
 /* Main footer */
@@ -252,10 +284,11 @@ ul {
   color: #f4f4fd;
 }
 
-.main-footer .accent {
-  color: #f4f4fd;
+.main-footer .logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
-.main-footer .text {
-  margin-top: 16px;
+.main-footer .accent {
+  color: #f4f4fd;
 }
