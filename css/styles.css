@@ -55,7 +55,6 @@ ul {
 }
 
 a {
-  color: currentColor;
   text-decoration: none;
 }
 
@@ -131,10 +130,6 @@ img {
   cursor: pointer;
 }
 
-.social-list svg {
-  fill: currentColor;
-}
-
 /* Header */
 
 .main-header {
@@ -190,9 +185,9 @@ img {
   content: '';
 
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 100%);
+  bottom: -1px;
+  left: 0;
+  transform: translateY(100%);
 
   display: inline-block;
   width: 100%;
@@ -211,7 +206,7 @@ img {
 .nav-list .link.current::after,
 .nav-list .link:hover::after,
 .nav-list .link:focus::after {
-  transform: translate(-50%, 0);
+  transform: translateY(0);
 }
 
 .nav-list .link,
@@ -304,6 +299,8 @@ img {
 }
 
 .features-list .thumb {
+  margin-bottom: 8px;
+
   padding: 24px 100px;
 
   height: 112px;
@@ -327,10 +324,6 @@ img {
   border: 1px solid var(--subtle-text);
   border-radius: 4px;
 } */
-
-.features-list .title {
-  margin-top: 8px;
-}
 
 /* Team section */
 
@@ -364,7 +357,7 @@ img {
   gap: 24px;
 }
 
-.social-list a {
+.social-list .link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,11 +368,17 @@ img {
   background-color: var(--primary-brand);
 
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-list .item:hover a,
-.social-list .item:focus a {
+.social-list .link:hover,
+.social-list .link:focus {
   background-color: var(--pressed-state);
+}
+
+.social-list .icon {
+  fill: var(--light);
 }
 
 /* Portfolio section */
@@ -415,7 +414,7 @@ img {
   width: 100%;
   height: 100%;
 
-  bottom: 0;
+  top: 0;
   transform: translateY(100%);
 
   color: var(--light);
@@ -434,6 +433,10 @@ img {
   padding-right: 16px;
   border: 1px solid var(--accent);
   border-top: none;
+}
+
+.portfolio-list .link {
+  color: currentColor;
 }
 
 /* Main footer */
@@ -473,10 +476,6 @@ img {
 
 .main-footer .social-list {
   gap: 16px;
-}
-
-.main-footer .link {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-footer-list .item:hover .link {
