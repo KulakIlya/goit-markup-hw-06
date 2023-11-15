@@ -474,6 +474,8 @@ img {
   display: inline-block;
   font-size: 16px;
   margin-bottom: 16px;
+
+  color: var(--white);
 }
 
 .main-footer .social-list {
