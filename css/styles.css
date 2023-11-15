@@ -425,7 +425,7 @@ img {
 
 .portfolio-list .item:hover .overlay,
 .portfolio-list .item:focus .overlay {
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 
 .portfolio-list .card-text {
