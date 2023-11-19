@@ -4,10 +4,10 @@ const modalWindow = document.querySelector('.backdrop');
 heroBtn.addEventListener('click', toggleModal);
 
 modalWindow.addEventListener('click', (e) => {
-  const target = e.target;
-  if (target.classList.contains('btn-close')) {
-    toggleModal();
-  }
+  const target = e.target.closest('.btn-close');
+  if (!target) return;
+
+  toggleModal();
 });
 
 function toggleModal() {
