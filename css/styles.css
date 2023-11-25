@@ -80,13 +80,13 @@ img {
   max-width: 320px;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
   .container {
     max-width: var(--tablet);
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1158px) {
   .container {
     max-width: var(--desktop);
     padding: 0 15px;
