@@ -614,6 +614,7 @@ img {
 @media screen and (min-width: 768px) {
   .features-list .title {
     text-align: left;
+    font-size: 20px;
   }
 }
 
