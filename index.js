@@ -23,6 +23,5 @@ mobileNav.addEventListener('click', (e) => {
 
 function toggleModal(ref) {
   ref.classList.toggle('is-opened');
-  console.log(document.body);
   document.body.classList.toggle('modal-is-opened');
 }
