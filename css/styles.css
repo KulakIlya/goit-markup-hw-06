@@ -1147,7 +1147,7 @@ img {
 
   height: 120px;
 
-  color: rgba(46, 47, 66, 0.4);
+  /* color: rgba(46, 47, 66, 0.4);   */
 
   resize: none;
 }
