@@ -17,6 +17,10 @@
   --desktop: 1158px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 
